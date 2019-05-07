@@ -292,7 +292,7 @@ function idealgas() {
         } // p
         else if (n && T && V) {
             document.getElementById('p').value = 'p = ' + ((n*R*T)/V).toFixed(3);
-        } // If only 1 or 2 varibles is defined
+        } // If only 1 or 2 varibles are defined
         else {
             document.getElementById('p').value = 'Udfyld 3';
             document.getElementById('V').value = 'Udfyld 3';
