@@ -1,0 +1,196 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css" />
+    <script type="text/javascript" src="calculation.js"></script>
+    <style type="text/css"></style>
+
+    <title>
+        The new school
+    </title>
+</head>
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-sclae=1">
+
+<body class="body" onload="main(); idealgas()">
+    <header class="homepageheader">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Hjem</a></li>
+                    <li><a href="Chemistry.html">Kemi</a></li>
+                    <li><a href="math.html">Matematik</a></li>
+                    <li><a href="">Fysik</a></li>
+                    <li><a href="buildingcell.html">Om</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="IntroP">
+        <h1 class="overskrift">Det periodiske system</h1>
+        <div class="wrapper">
+            <div class="colP">
+                Det periodiske system er en tabelarrangering af grundstofferne,
+                ordnet efter deres atomnumre og gennemgående kemiske egenskaber.
+            </div>
+
+            <div class="colP">
+                Alle grundstofferne i det periodiske system har et entydigt atomnummer,
+                også kaldet grundstofnummer, som direkte fortæller hvor mange protoner der findes
+                i atomkernen i det pågældende grundstof. <br>
+                Atomsymbolet er en forkortelse af navnet på grundstoffet. Symbolet er det samme på
+                alle sprog. For eksempel er atomsymbolet for oxygen O. Symbolet bruges i kemiske
+                formler og reaktionsligninger.
+            </div>
+
+            <div class="colP">
+                Mængden er hvor meget hvert atom vejer. Mængden bliver angvivet g/mol.
+
+            </div>
+        </div>
+        <h4 style="text-align: center" class="sans">↓ Scroll for det periodiske system ↓</h4>
+    </div>
+
+    <div class="Periodiske">
+        <img src="det-periodiske-system-png-6.png" class="PeriodicTable">
+    </div>
+
+    <div class="cFirst">
+        <h1 class="overskrift">Mængdeberegning</h1>
+        <div class="wrapper">
+            <div class="col col1">
+                <p>Med mængdeberegning kan man udregne hvor meget et enkelt molekyle vejer i g/mol.
+                    Mol regnes som 6,02 &sdot; 10<sup>23</sup> , hvilket er enheden for stofmængde
+                    og har symbolet n.
+                </p>
+
+                <p>Molarmasse (M) er massen for 1 mol af et stof</p>
+            </div>
+
+            <div class="col col2">
+                <p>Lad os tage et bogstavs eksempel: M (A<sub>x</sub>B<sub>y</sub>)</p>
+                <p>I eksemplet har vi M (A<sub>x</sub>B<sub>y</sub>), som betyder at man ønsker
+                    molarmassen af atom A x gange og atom B y gange. Her vil vi så: </p>
+                <p>M(A<sub>x</sub>B<sub>y</sub>) = M (A) &sdot; x + (B) &sdot; y </p>
+
+            </div>
+
+            <div class="col col3">
+                <p>Nu til et tal eksempel. Lad os se på vand: M(H<sub>2</sub>O)</p>
+                <p>I tal eksemplet har vi M (H<sub>2</sub>O), det løser vi ved M(H<sub>2</sub>O)
+                    = M (H) &sdot; 2 + (O)</p>
+                <p>M(H<sub>2</sub>O) = M (1,008) &sdot; 2 + (16,00) = 18,016 g/mol</p>
+            </div>
+
+        </div>
+        <h4 style="text-align: center" class="sans">↓ Scroll for mængdeberegnings checker ↓</h4>
+    </div>
+
+    <div class="cFirstI">
+        <div class="interactive">
+            <div class="colP">
+                <div class="helpWindow">
+                    <p style="text-align: left">Eksempler:</p>
+                    <p style="text-align: center">H2O</p>
+                    <p style="text-align: center">NaCl</p>
+                    <p style="text-align: center">CH4</p>
+                    <p style="text-align: center">CuSO4</p>
+                    <p style="text-align: center">C2H5OH</p>
+                </div>
+            </div>
+
+            <div class="colP">
+                <div class="resultWindow">
+                    <p class="instruction">Indtast dit molekyle her↓</p>
+                    
+                    <form id="myform" action="" method="">
+                            <input class="input" id="input" type="text" name=""></input>
+                    </form>
+                    <p class="elements">Molekyle:</p>
+                    <p class="mass">Masse:</p>
+                    <p id="output2" class="molecule"></p>
+                    <p id="output" class="intitialResult"></p>
+                    <button class="copyButton" id="copy">Kopier til udklipsholder</button>
+                </div>
+            </div>
+
+            <div class="colP">
+                <div class="resultLog">
+                    <div style="text-align: left;">Result log:</div>
+                    <ol id="log" class="resultList"> </ol>
+                    <button class="clearButton" id="clearLog">All/Clear</button>
+                </div>
+            </div>
+        </div>        
+    </div>
+
+    <div class="cSecond">
+        <h1 class="overskrift">idealgasligning</h1>
+        <div class="wrapper">
+            <div class="colP">
+                Idealgasligningen er en model, der beskriver en ideel gas tilstand. Modelen er for det meste 
+                under "standardbetingelse", dette betyder at det absolutte tryk er på 101,325 kPa (1 atm) 
+                og temperaturen på 298,15 K (25 °C).
+            </div>
+
+            <div class="colP">
+                <p>Idealgasligningen skrives som: <br> p&sdot;V = n&sdot;R&sdot;T <br>
+                En god huske regle er; postevand er lig ni røde tuborg. n er som tidligere nævnt stofmængde. </p>
+            </div>
+                
+            <div class="colP">
+                <p>R er gaskonstanten som skrives som: <br>  0,0831 (L&sdot;bar)/(mol*K) </p> 
+            </div>
+        </div>    
+        <h4 style="text-align: center" class="sans">↓ Scroll for idealgaslignings udregner ↓</h4>
+    </div>
+
+    <div class="cFirstI">
+        <div class="interactive">
+            <div class="helpWindowIdeal">
+                <p style="text-align: center">Tips:</p> 
+                <p style="text-align: left">p er tryk målt i bar</p>
+                <p style="text-align: left">V er volumen målt i liter</p>
+                <p style="text-align: left">n er stofmængde målt i gram</p>
+                <p style="text-align: left">T er temperaturen målt i kelvin</p>
+                
+            </div>
+            <div class="idealDiv">
+                    <p style="text-align:center">Indtast dine variabler nedenfor</p>
+                <div class="wrapperIdeal">
+                    <form id="myformIdeal" action="" method="">
+                        <div class="colI">
+                            <!-- tryk p -->
+                            <p style="text-align:center">Tryk (p)</p>
+                            <input class="idealInput" id="p" type="text" name=""></input>
+                        </div>
+                        <div class="colI">
+                            <!-- volumen V -->
+                            <p style="text-align:center">Volumen (V)</p>
+                            <input class="idealInput" id="V" type="text" name=""></input>
+                        </div>
+                        <div class="colI">
+                            <!-- stofmængde n -->
+                            <p style="text-align:center">Stofmængde (n)</p>
+                            <input class="idealInput" id="n" type="text" name=""></input>
+                        </div>
+                        <div class="colI">
+                            <!-- kelvin T -->
+                            <p style="text-align:center">Temperatur (T)</p>
+                            <input class="idealInput" id="T" type="text" name=""></input> 
+                        </div>
+                    </form>
+                    </div>
+                    <button class="uderegn" id="calculateIdeal">Udregn</button>    
+                    <button class="clearIdeal" id="clearIdeal">Clear</button>
+                </div>
+            <div class="colP">
+             <!-- <p>col 2</p> -->
+            </div>
+        </div>        
+    </div>
+
+</body>
+</html>
