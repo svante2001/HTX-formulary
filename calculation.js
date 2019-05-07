@@ -273,26 +273,26 @@ function idealgas() {
         var T = document.getElementById('T').value;
         const R = 0.0831;
         
-        // If all 4 submit boxes are defined
+        //If all 4 submit boxes are defined
         if (T && p && V && n) {
             document.getElementById('p').value = 'Kun 3 udfyldes';
             document.getElementById('V').value = 'Kun 3 udfyldes';
             document.getElementById('n').value = 'Kun 3 udfyldes';
             document.getElementById('T').value = 'Kun 3 udfyldes';
         }
-        // T
+        //T
         else if (p && V && n) {
             document.getElementById('T').value = 'T = ' + ((p*V)/(n*R)).toFixed(3);           
-        } // V
+        } //V
         else if (n && T && p) {
             document.getElementById('V').value = 'V = ' + ((n*R*T)/p).toFixed(3);
-        } // n
+        } //n
         else if (p && V &&T) {
             document.getElementById('n').value = 'n = ' + ((p*V)/(R*T)).toFixed(3);
-        } // p
+        } //p
         else if (n && T && V) {
             document.getElementById('p').value = 'p = ' + ((n*R*T)/V).toFixed(3);
-        } // If only 1 or 2 varibles are defined
+        } //If only 1 or 2 varibles are defined
         else {
             document.getElementById('p').value = 'Udfyld 3';
             document.getElementById('V').value = 'Udfyld 3';
