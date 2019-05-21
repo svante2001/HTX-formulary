@@ -1,6 +1,6 @@
 function main() {
     const myform = document.getElementById('myform');
-    myform.onsubmit=function() {
+    myform.onsubmit = function() {
         const input = document.getElementById('input');
         const output = document.getElementById('output');
 
@@ -283,7 +283,7 @@ function idealgas() {
         //T
         else if (p && V && n) {
             document.getElementById('T').value = 'T = ' + ((p*V)/(n*R)).toFixed(3);           
-        } //V
+        } // V
         else if (n && T && p) {
             document.getElementById('V').value = 'V = ' + ((n*R*T)/p).toFixed(3);
         } //n
@@ -329,6 +329,47 @@ function Pythagaros() {
             document.getElementById('a').value = 'Udfyld 2';
             document.getElementById('b').value = 'Udfyld 2';
             document.getElementById('c').value = 'Udfyld 2';
-        }           
+        }
+    } 
+    
+    // Clear result
+    document.getElementById("clearPythaharos").onclick = function () {
+        document.getElementById('a').value = '';
+        document.getElementById('b').value = '';
+        document.getElementById('c').value = '';
+    }
+}
+
+function vinkelBeregner() {
+    document.getElementById("calculateVinkel").onclick = function () {        
+        var A = parseFloat(document.getElementById('vinkelA').value);
+        var B = parseFloat(document.getElementById('vinkelB').value);
+        var C = parseFloat(document.getElementById('vinkelC').value);
+        var a = parseFloat(document.getElementById('sidea').value);
+        var b = parseFloat(document.getElementById('sideb').value);
+        var c = parseFloat(document.getElementById('sidec').value);
+
+        // if ([A, B, C].filter(v => v !=='').length === 3) {
+        //     alert('fejl')
+        // }
+        
+
+        if ([a, b, c].filter(s => !isNaN(s)).length === 3) {
+            document.getElementById('vinkelA').value = (180*Math.acos((b*b+c*c-a*a)/(2*b*c))/Math.PI).toFixed(3);
+            document.getElementById('vinkelB').value = (180*Math.acos((a*a+c*c-b*b)/(2*a*c))/Math.PI).toFixed(3);
+            document.getElementById('vinkelC').value = (180*Math.acos((a*a+b*b-c*c)/(2*a*b))/Math.PI).toFixed(3);
+        }
+    }
+
+
+
+    
+    document.getElementById("clearVinkelberegner").onclick = function () {
+        document.getElementById('vinkelA').value = '';
+        document.getElementById('vinkelB').value = '';
+        document.getElementById('vinkelC').value = '';
+        document.getElementById('sidea').value = '';
+        document.getElementById('sideb').value = '';
+        document.getElementById('sidec').value = '';
     }
 }

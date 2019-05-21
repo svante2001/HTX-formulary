@@ -1,7 +1,7 @@
 <html>
     <head>
         <title>
-            The new school
+            En formelsamling | matematik
         </title>
 
         <link rel="stylesheet" href="style.css" />
@@ -12,7 +12,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-sclae=1">
 
-    <body class="body" onload="Pythagaros()">
+    <body class="body" onload="Pythagaros(), vinkelBeregner()" >
+        
 
         <header class="homepageheader">
             <div class="container">
@@ -22,7 +23,6 @@
                             <li><a href="Chemistry.html">Kemi</a></li>
                             <li><a href="math.html">Matematik</a></li>
                             <li><a href="">Fysik</a></li>
-                            <li><a href="buildingcell.html">Om</a></li>
                         </ul>
                     </nav>
             </div>
@@ -32,50 +32,123 @@
             <h1 class="overskrift">Pythagoras</h1>
             <div class="wrapper">
                 <div class="colP">
-                    1
+                    Kolonne 1
                 </div>
     
                 <div class="colP">
-                    2
+                    Kolonne 2
                 </div>
     
                 <div class="colP">
-                    3    
+                    Kolonne 3    
                 </div>
             </div>
             <h4 style="text-align: center" class="sans">↓ Scroll for pythagoras beregner ↓</h4>
         </div>
     
         <div class="PythagarosRegner">            
-            <div class="idealDiv">
-                <p style="text-align:center">Indtast dine variabler nedenfor</p>
-            <div class="wrapperPythagaros">
-                <div class="pythagorasDiv">
-                        <form id="myformIdeal" action="" method="">
-                            <div class="colI">
-                                <!-- a -->
-                                <p style="text-align:center">a</p>
-                                <input class="PythagarosInput" id="a" type="text" name=""></input>
-                            </div>
-                            <div class="colI">
-                                <!-- b -->
-                                <p style="text-align:center">b</p>
-                                <input class="PythagarosInput" id="b" type="text" name=""></input>
-                            </div>
-                            <div class="colI">
-                                <!-- c -->
-                                <p style="text-align:center">c</p>
-                                <input class="PythagarosInput" id="c" type="text" name=""></input>
-                            </div>
-                            <button class="uderegn" id="calculatePythagaros">Udregn</button>    
-                            <button class="clearPythaharos" id="clearPythaharos">Clear</button>                                
-                        </form>
+            <div class="cFirstI">
+                <div class="interactive">
+                    <div class="colP">
+                        <div class="helpWindowPythagaros">
+                            <p style="text-align: left">Husk:</p>
+                            <p style="text-align: left">Dette gælder kun retvinklede trekanter</p>
                         </div>
+                    </div>
+                    
+                    <div class="colP">
+                        <div class="resultPythagaros">
+                            <p class="pythagarosInstruction">Indtast dine variabler nedenfor↓</p>
+                                <div class="Pythagaroswrapper">
+                                    <div class="colI">                               
+                                        <p style="text-align:center">a</p>
+                                        <input class="PythagarosInput" id="a" type="text" name=""></input>
+                                    </div>                    
+                                    <div class="colI">                               
+                                        <p style="text-align:center">b</p>
+                                        <input class="PythagarosInput" id="b" type="text" name=""></input>
+                                    </div>
+                                    <div class="colI">
+                                        <p style="text-align:center">c</p>
+                                        <input class="PythagarosInput" id="c" type="text" name=""></input>
+                                    </div> 
+                                </div>                                
+                                <button class="uderegn" id="calculatePythagaros">Udregn</button>    
+                                <button class="clearPythaharos" id="clearPythaharos">Clear</button>
+                        </div>
+                    </div>                    
+                    <div class="colP">
+                        <!-- 3 -->
+                    </div>
+            </div>        
+        </div>    
+
+        <div class="IntroPythagoras">
+                <h1 class="overskrift">Vilkårlig trekants beregner</h1>
+                <div class="wrapper">
+                    <div class="colP">
+                        1
+                    </div>
+        
+                    <div class="colP">
+                        2
+                    </div>
+        
+                    <div class="colP">
+                        3    
+                    </div>
                 </div>
 
-                
-            </div>
-        </div>
+                <div class="PythagarosRegner">            
+                    <div class="cFirstI">
+                        <div class="interactive">
+                            <div class="colP">
+                                <div class="helpWindowPythagaros">
+                                    <p style="text-align: left">Husk:</p>
+                                    <p style="text-align: left"></p>
+                                </div>
+                            </div>
+                            
+                            <div class="colP">
+                                <div class="resultVinkelBeregner">
+                                    <p class="vinkelInstruction">Indtast 3 variabler nedenfor↓</p>                                                                      
+                                    <!-- vinkler -->
+                                    <div class="vinkelwrapper">
+                                        <div class="colVinkel">                               
+                                            <p style="text-align:center">Vinkel A</p>
+                                            <input class="vinkelInputa" id="vinkelA" type="text" name=""></input>
+                                        </div>                    
+                                        <div class="colVinkel">                               
+                                            <p style="text-align:center">Vinkel B</p>
+                                            <input class="vinkelInput" id="vinkelB" type="text" name=""></input>
+                                        </div>
+                                        <div class="colVinkel">
+                                            <p style="text-align:center">Vinkel C</p>
+                                            <input class="vinkelInput" id="vinkelC" type="text" name=""></input>
+                                        </div> 
+
+                                        <!-- sider -->
+                                        <div class="colVinkel">                               
+                                            <p style="text-align:center">Side a</p>
+                                            <input class="sideInputa" id="sidea" type="text" name=""></input>
+                                        </div>                    
+                                        <div class="colVinkel">                               
+                                            <p style="text-align:center">Side b</p>
+                                            <input class="sideInput" id="sideb" type="text" name=""></input>
+                                        </div>
+                                        <div class="colVinkel">
+                                            <p style="text-align:center">Side c</p>
+                                            <input class="sideInput" id="sidec" type="text" name=""></input>
+                                        </div> 
+                                        <button class="uderegn" id="calculateVinkel">Udregn</button>
+                                        <button class="clearVinkelberegner" id="clearVinkelberegner">Clear</button>   
+                                    </div>
+                                </div>
+                            </div>                    
+                            <div class="colP">
+                                <!-- 3 -->
+                            </div>
+                    </div>        
 
     </body>
 </html>
