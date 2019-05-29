@@ -6,14 +6,14 @@
     <style type="text/css"></style>
 
     <title>
-        The new school
+        En formelsamling | kemi
     </title>
 </head>
 
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-sclae=1">
 
-<body class="body" onload="main(); idealgas()">
+<body class="body" onload="main(); idealgas(); stofmængde()">
     <header class="homepageheader">
         <div class="container">
             <nav>
@@ -21,8 +21,7 @@
                     <li><a href="index.html">Hjem</a></li>
                     <li><a href="Chemistry.html">Kemi</a></li>
                     <li><a href="math.html">Matematik</a></li>
-                    <li><a href="">Fysik</a></li>
-                    <li><a href="buildingcell.html">Om</a></li>
+                    <li><a href="">(Fysik)</a></li>
                 </ul>
             </nav>
         </div>
@@ -109,7 +108,7 @@
                             <input class="input" id="input" type="text" name=""></input>
                     </form>
                     <p class="elements">Molekyle:</p>
-                    <p class="mass">Masse:</p>
+                    <p class="mass">Molmasse:</p>
                     <p id="output2" class="molecule"></p>
                     <p id="output" class="intitialResult"></p>
                     <button class="copyButton" id="copy">Kopier til udklipsholder</button>
@@ -126,8 +125,65 @@
         </div>        
     </div>
 
+    <div class="IntroPythagoras">
+        <h1 class="overskrift">Stofmængde</h1>
+        <div class="wrapper">
+            <div class="colP">
+                Kolonne 1
+            </div>
+
+            <div class="colP">
+                Kolonne 2
+            </div>
+
+            <div class="colP">
+                Kolonne 3    
+            </div>
+        </div>
+        <h4 style="text-align: center" class="sans">↓ Scroll for stofmængde beregner ↓</h4>
+    </div>
+
+
+<!-- Stofmængde -->
+    <div class="cFirstI">
+        <div class="interactive">
+            <div class="helpWindowIdeal">
+                <p style="text-align: left">SI-enheder:</p>
+                <p style="text-align: center">n = mol</p>
+                <p style="text-align: center">m = gram</p>
+                <p style="text-align: center">M = g/mol</p>
+            </div>
+            <div class="stofmængdeDiv">
+                    <p style="text-align:center">Indtast dine variabler nedenfor</p>
+                <div class="wrapperStofmængde">
+                        <div class="colS">
+                            <!-- n -->
+                            <p style="text-align:center">Softmængde (n)</p>
+                            <input class="idealInput" id="n" type="text" name=""></input>
+                        </div>
+                        <div class="colS">
+                            <!-- m -->
+                            <p style="text-align:center">Masse (m)</p>
+                            <input class="idealInput" id="m" type="text" name=""></input>
+                        </div>
+                        <div class="colS">
+                            <!-- M -->
+                            <p style="text-align:center">Molarmasse (M)</p>
+                            <input class="idealInput" id="M" type="text" name=""></input>
+                        </div>
+                    </div>
+                    <button class="uderegn" id="udregnStofmængde">Udregn</button>    
+                    <button class="clearIdeal" id="clearStofmængde">Clear</button>
+                </div>
+
+            <div class="colP">
+             <!-- <p>col 2</p> -->
+            </div>
+        </div>        
+    </div>
+
     <div class="cSecond">
-        <h1 class="overskrift">idealgasligning</h1>
+        <h1 class="overskrift">Idealgasligning</h1>
         <div class="wrapper">
             <div class="colP">
                 Idealgasligningen er en model, der beskriver en ideel gas tilstand. Modelen er for det meste 
@@ -160,7 +216,6 @@
             <div class="idealDiv">
                     <p style="text-align:center">Indtast dine variabler nedenfor</p>
                 <div class="wrapperIdeal">
-                    <form id="myformIdeal" action="" method="">
                         <div class="colI">
                             <!-- tryk p -->
                             <p style="text-align:center">Tryk (p)</p>
@@ -181,7 +236,6 @@
                             <p style="text-align:center">Temperatur (T)</p>
                             <input class="idealInput" id="T" type="text" name=""></input> 
                         </div>
-                    </form>
                     </div>
                     <button class="uderegn" id="calculateIdeal">Udregn</button>    
                     <button class="clearIdeal" id="clearIdeal">Clear</button>
