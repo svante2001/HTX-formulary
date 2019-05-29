@@ -12,8 +12,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-sclae=1">
 
-    <body class="body" onload="Pythagaros(), vinkelBeregner()" >
-        
+    <body class="body" onload="Pythagaros(), vinkelBeregner(), fractions ()" >
+         
 
         <header class="homepageheader">
             <div class="container">
@@ -22,21 +22,73 @@
                             <li><a href="index.html">Hjem</a></li>
                             <li><a href="Chemistry.html">Kemi</a></li>
                             <li><a href="math.html">Matematik</a></li>
-                            <li><a href="">Fysik</a></li>
+                            <li><a href="">(Fysik)</a></li>
                         </ul>
                     </nav>
             </div>
         </header>
 
+
+        <div class="Introbrøker">
+            <h1 class="overskrift">Brøkregner</h1>
+            <div class="wrapper">
+                <div class="colP">
+                    1
+                </div>
+                <div class="colP">
+                    2
+                </div>
+                <div class="colP">
+                    3
+                </div>
+            </div>
+        </div>        
+
+        <div class="brøkregner">
+            <div class="wrapper">
+                
+                <div class="colP">
+                    <div class="brøkinputs">
+                        <input id="forkort" type="checkbox">Forkort resultat</input> <br>
+                        <select id="operation" name="operation">
+                            <option value="forkort">Forkort a</option>
+                            <option value="plus">Plus</option>
+                            <option value="minus">Minus</option>
+                            <option value="gange">Gange</option>
+                            <option value="divider">Divider</option>
+                        </select> <br>
+                        <input class="brøkinput" id="aT" type="text" name=""></input>
+                        <input class="brøkinput" id="bT" type="text" name=""></input> <br> <br>
+                        <input class="brøkinput" id="aN" type="text" name=""></input>
+                        <input class="brøkinput" id="bN" type="text" name=""></input>
+                        <button class="uderegn" id="fractions">Udregn</button>
+                    </div>
+                </div>
+                <div class="colP">
+                    <div class="brøkResult">
+                        <p id="outputT" class="outputT">Tæller</p>
+                        <p id="outputN" class="outputN">Nævner</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
         <div class="IntroPythagoras">
             <h1 class="overskrift">Pythagoras</h1>
             <div class="wrapper">
                 <div class="colP">
-                    Kolonne 1
+                    Den pythagoræiske læresætning beskriver forholdet mellem sidelængderne 
+                    i en retvinklet trekant. Det er en af de grundlæggende sætninger i den euklidiske geometri. 
+                    Sætningen kan også udtrykkes som ligning, idet kateternes længder er a og b 
+                    og hypotenusens c
                 </div>
     
                 <div class="colP">
-                    Kolonne 2
+                    Sætning skrives som: <br>
+                    a<sup>2</sup>+b<sup>2</sup>=c<sup>2</sup> <br>
+                    Det er muligt at finde c ved 
+                    at tage kvadratroden af summen af a og b.
                 </div>
     
                 <div class="colP">

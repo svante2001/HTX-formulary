@@ -4,7 +4,7 @@ function main() {
         const input = document.getElementById('input');
         const output = document.getElementById('output');
 
-        //Divides the input into atoms and substrings
+        // Divides the input into atoms and substrings
         var molecule = input.value;
         var regex = /([A-Z][a-z]?\d*)/g;
         var match, results = [];
@@ -22,7 +22,7 @@ function main() {
             }
         }
 
-        //The periodic table in cases
+        // The periodic table in cases
         var w = 0.0;
         for (var i in results) {
             var atom = results[i];
@@ -234,17 +234,17 @@ function main() {
             }
         }
 
-        //Intial result - toFixed rounds to (n) decimals
+        // Intial result - toFixed rounds to (n) decimals
         output.innerHTML = w.toFixed(3) + ' g/mol';
         output2.innerHTML = molecule;
         
-        //Log
+        // Log
         const log = document.getElementById("log");
         log.innerHTML += '<li>' + molecule + ':   ' + w.toFixed(3) + ' g/mol</li>';
         return false;
     }
 
-    //Clear log
+    // Clear log
     document.getElementById("clearLog").onclick = function () {
         var log = document.getElementById("log");
         log.innerHTML = '';
@@ -253,7 +253,7 @@ function main() {
         document.getElementById('input').value = '';
     }
 
-    //Copy result to clipboard button
+    // Copy result to clipboard button
     document.getElementById("copy").onclick = function () {
         var textarea = document.createElement('textarea');
         const result = document.getElementById('output')
@@ -265,6 +265,87 @@ function main() {
     }
 }
 
+function fractions () {
+    function gcd(a, b) {
+        while (b !== 0) {
+            var temp = b;
+            b = a % b;
+            a = temp;
+        }
+        return a;
+    }
+
+    function fractionOutput(a, b) {
+        var forkort = document.getElementById('forkort').checked;
+        if (forkort) {
+            d = gcd(a, b);
+            a = a / d;    
+            b = b / d;
+        }
+        
+        document.getElementById('outputT').innerHTML = 'Tæller: ' + a;
+        document.getElementById('outputN').innerHTML = 'Nævner: ' + b;
+    }
+
+    document.getElementById("fractions").onclick = function () {
+        var aT = document.getElementById('aT').value;
+        var aN = document.getElementById('aN').value;
+        var bT = document.getElementById('bT').value;
+        var bN = document.getElementById('bN').value;
+        var operation = document.getElementById("operation").selectedIndex;
+        var rT;
+        var rN;
+
+        switch (operation) {
+            case 0: // Forkort
+                rT = aT;
+                rN = aN;
+                break;
+            case 1: // Plus
+                rT = aT*bN + aN*bT;
+                rN = aN*bN;
+                break;
+            case 2: // Minus
+                rT = aT*bN - aN*bT;
+                rN = aN*bN;
+                break;
+            case 3: // Gange
+                rT = aT*bT;
+                rN = aN*bN;
+                break;
+            case 4: // Division
+                rT = aT*bN;
+                rN = aN*bT;
+                break;
+        }
+        fractionOutput(rT, rN);
+    }
+}
+
+function stofmængde () {
+    document.getElementById("udregnStofmængde").onclick = function () {
+        var n = document.getElementById('n').value;
+        var m = document.getElementById('m').value;
+        var M = document.getElementById('M').value;
+
+        if (n && m && M) {
+            alert('Du må kun udfylde 2 felter')
+        } else if (m && M) {
+            document.getElementById('n').value = (m/M).toFixed(3) + ' mol';
+        } else if (n && m) {
+            document.getElementById('M').value = (m/n).toFixed(3) + ' g/mol';
+        } else if (n && M) {
+            document.getElementById('m').value = (n*M).toFixed(3) + ' g';
+        }
+    }
+
+    document.getElementById('clearStofmængde').onclick = function () {
+        document.getElementById('n').value = '';
+        document.getElementById('m').value = '';
+        document.getElementById('M').value = '';
+    }
+}
+
 function idealgas() {
     document.getElementById("calculateIdeal").onclick = function () {
         var p = document.getElementById('p').value;
@@ -273,34 +354,36 @@ function idealgas() {
         var T = document.getElementById('T').value;
         const R = 0.0831;
         
-        //If all 4 submit boxes are defined
+        // If all 4 submit boxes are defined
         if (T && p && V && n) {
             document.getElementById('p').value = 'Kun 3 udfyldes';
             document.getElementById('V').value = 'Kun 3 udfyldes';
             document.getElementById('n').value = 'Kun 3 udfyldes';
             document.getElementById('T').value = 'Kun 3 udfyldes';
+            alert('Du må kun udfylde 3 variabler')
         }
-        //T
+        // T
         else if (p && V && n) {
             document.getElementById('T').value = 'T = ' + ((p*V)/(n*R)).toFixed(3);           
         } // V
         else if (n && T && p) {
             document.getElementById('V').value = 'V = ' + ((n*R*T)/p).toFixed(3);
-        } //n
+        } // n
         else if (p && V &&T) {
             document.getElementById('n').value = 'n = ' + ((p*V)/(R*T)).toFixed(3);
-        } //p
+        } // p
         else if (n && T && V) {
             document.getElementById('p').value = 'p = ' + ((n*R*T)/V).toFixed(3);
-        } //If only 1 or 2 varibles are defined
+        } // If only 1 or 2 varibles are defined
         else {
             document.getElementById('p').value = 'Udfyld 3';
             document.getElementById('V').value = 'Udfyld 3';
             document.getElementById('n').value = 'Udfyld 3';
             document.getElementById('T').value = 'Udfyld 3';
+            alert('Du skal udfylde 3 varialber')
         }
     }   
-    //Clear result
+    // Clear result
     document.getElementById("clearIdeal").onclick = function () {
         document.getElementById('p').value = '';
         document.getElementById('V').value = '';
@@ -319,6 +402,7 @@ function Pythagaros() {
             document.getElementById('a').value = 'Kun 2 udfyldes';
             document.getElementById('b').value = 'Kun 2 udfyldes';
             document.getElementById('c').value = 'Kun 2 udfyldes';
+            alert('Du skal kun udfylde 2 variabler')
         } else if (a && b) {
             document.getElementById('c').value = 'c = ' + Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2)).toFixed(3);  
         } else if (a && c) {
@@ -329,8 +413,9 @@ function Pythagaros() {
             document.getElementById('a').value = 'Udfyld 2';
             document.getElementById('b').value = 'Udfyld 2';
             document.getElementById('c').value = 'Udfyld 2';
+            alert('Du skal udfylde 2')
         }
-    } 
+    }
     
     // Clear result
     document.getElementById("clearPythaharos").onclick = function () {
@@ -350,10 +435,9 @@ function vinkelBeregner() {
         var c = parseFloat(document.getElementById('sidec').value);
 
         // if ([A, B, C].filter(v => v !=='').length === 3) {
-        //     alert('fejl')
+        //     alert('Kan ikke udregne trekanten med kun 3 vinkler')
         // }
         
-
         if ([a, b, c].filter(s => !isNaN(s)).length === 3) {
             document.getElementById('vinkelA').value = (180*Math.acos((b*b+c*c-a*a)/(2*b*c))/Math.PI).toFixed(3);
             document.getElementById('vinkelB').value = (180*Math.acos((a*a+c*c-b*b)/(2*a*c))/Math.PI).toFixed(3);
@@ -362,8 +446,6 @@ function vinkelBeregner() {
     }
 
 
-
-    
     document.getElementById("clearVinkelberegner").onclick = function () {
         document.getElementById('vinkelA').value = '';
         document.getElementById('vinkelB').value = '';
