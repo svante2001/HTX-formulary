@@ -13,7 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-sclae=1">
 
     <body class="body" onload="Pythagaros(), vinkelBeregner(), fractions ()" >
-         
+
 
         <header class="homepageheader">
             <div class="container">
@@ -33,25 +33,28 @@
             <h1 class="overskrift">Brøkregner</h1>
             <div class="wrapper">
                 <div class="colP">
-                    1
+                    Vælg operation og intast dine to brøker. Husk at vælge om dit resultat skal forkortes
+                    til mindste mulige brøk.
                 </div>
                 <div class="colP">
-                    2
+                    Som standard er resultatet af de fire operationer ikke forkortet. Hvis din nævner er et primtal
+                    kan resultatet ikke forkortes.
                 </div>
                 <div class="colP">
-                    3
+                    Hvis du kun vil have forkortet en brøk - så bare hak "Forkort resultat" af og indtast din
+                    brøk i den første brøk input. Vær opmærksom på at operation vælgeren står på "Ingen operation"
                 </div>
             </div>
-        </div>        
+        </div>
 
         <div class="brøkregner">
             <div class="wrapper">
-                
+
                 <div class="colP">
                     <div class="brøkinputs">
                         <input id="forkort" type="checkbox">Forkort resultat</input> <br>
                         <select id="operation" name="operation">
-                            <option value="forkort">Forkort a</option>
+                            <option value="forkort">Ingen operation</option>
                             <option value="plus">Plus</option>
                             <option value="minus">Minus</option>
                             <option value="gange">Gange</option>
@@ -62,6 +65,7 @@
                         <input class="brøkinput" id="aN" type="text" name=""></input>
                         <input class="brøkinput" id="bN" type="text" name=""></input>
                         <button class="uderegn" id="fractions">Udregn</button>
+                        <button class="clearFractions" id="clearFractions">Clear</button>
                     </div>
                 </div>
                 <div class="colP">
@@ -78,27 +82,23 @@
             <h1 class="overskrift">Pythagoras</h1>
             <div class="wrapper">
                 <div class="colP">
-                    Den pythagoræiske læresætning beskriver forholdet mellem sidelængderne 
-                    i en retvinklet trekant. Det er en af de grundlæggende sætninger i den euklidiske geometri. 
-                    Sætningen kan også udtrykkes som ligning, idet kateternes længder er a og b 
+                    Den pythagoræiske læresætning beskriver forholdet mellem sidelængderne
+                    i en retvinklet trekant. Det er en af de grundlæggende sætninger i den euklidiske geometri.
+                    Sætningen kan også udtrykkes som ligning, idet kateternes længder er a og b
                     og hypotenusens c
                 </div>
-    
                 <div class="colP">
-                    Sætning skrives som: <br>
                     a<sup>2</sup>+b<sup>2</sup>=c<sup>2</sup> <br>
-                    Det er muligt at finde c ved 
-                    at tage kvadratroden af summen af a og b.
                 </div>
-    
                 <div class="colP">
-                    Kolonne 3    
+                        Det er muligt at finde c ved at tage kvadratroden af summen af a og b, men kan omskrives
+                        til en vilkårlig side.
                 </div>
             </div>
             <h4 style="text-align: center" class="sans">↓ Scroll for pythagoras beregner ↓</h4>
         </div>
-    
-        <div class="PythagarosRegner">            
+
+        <div class="PythagarosRegner">
             <div class="cFirstI">
                 <div class="interactive">
                     <div class="colP">
@@ -107,51 +107,52 @@
                             <p style="text-align: left">Dette gælder kun retvinklede trekanter</p>
                         </div>
                     </div>
-                    
+
                     <div class="colP">
                         <div class="resultPythagaros">
                             <p class="pythagarosInstruction">Indtast dine variabler nedenfor↓</p>
                                 <div class="Pythagaroswrapper">
-                                    <div class="colI">                               
+                                    <div class="colI">
                                         <p style="text-align:center">a</p>
                                         <input class="PythagarosInput" id="a" type="text" name=""></input>
-                                    </div>                    
-                                    <div class="colI">                               
+                                    </div>
+                                    <div class="colI">
                                         <p style="text-align:center">b</p>
                                         <input class="PythagarosInput" id="b" type="text" name=""></input>
                                     </div>
                                     <div class="colI">
                                         <p style="text-align:center">c</p>
                                         <input class="PythagarosInput" id="c" type="text" name=""></input>
-                                    </div> 
-                                </div>                                
-                                <button class="uderegn" id="calculatePythagaros">Udregn</button>    
+                                    </div>
+                                </div>
+                                <button class="uderegn" id="calculatePythagaros">Udregn</button>
                                 <button class="clearPythaharos" id="clearPythaharos">Clear</button>
                         </div>
-                    </div>                    
+                    </div>
                     <div class="colP">
                         <!-- 3 -->
                     </div>
-            </div>        
-        </div>    
+            </div>
+        </div>
 
         <div class="IntroPythagoras">
                 <h1 class="overskrift">Vilkårlig trekants beregner</h1>
                 <div class="wrapper">
                     <div class="colP">
-                        1
+                        I vilkårlig trekants beregneren skal man kun kende 3 sider/vinkler for at kunne udregne alle
+                        siderne og alle vinklerne. Hvis man kender alle tre vinkler, men ingen sider er det ikke
+                        muligt at regne siderne ud.
                     </div>
-        
                     <div class="colP">
-                        2
+                        Man beregner dette med sinus- og cosinusrelationerne.
                     </div>
-        
                     <div class="colP">
-                        3    
+                        Vinkler er skrevet med stort og sider med småt. Samme bogstaver ligger overfor hinanden.
                     </div>
                 </div>
+                <h4 style="text-align: center" class="sans">↓ Scroll for vilkårlig trekants beregner ↓</h4>
 
-                <div class="PythagarosRegner">            
+                <div class="PythagarosRegner">
                     <div class="cFirstI">
                         <div class="interactive">
                             <div class="colP">
@@ -160,47 +161,47 @@
                                     <p style="text-align: left"></p>
                                 </div>
                             </div>
-                            
+
                             <div class="colP">
                                 <div class="resultVinkelBeregner">
-                                    <p class="vinkelInstruction">Indtast 3 variabler nedenfor↓</p>                                                                      
+                                    <p class="vinkelInstruction">Indtast 3 variabler nedenfor↓</p>
                                     <!-- vinkler -->
                                     <div class="vinkelwrapper">
-                                        <div class="colVinkel">                               
+                                        <div class="colVinkel">
                                             <p style="text-align:center">Vinkel A</p>
                                             <input class="vinkelInputa" id="vinkelA" type="text" name=""></input>
-                                        </div>                    
-                                        <div class="colVinkel">                               
+                                        </div>
+                                        <div class="colVinkel">
                                             <p style="text-align:center">Vinkel B</p>
                                             <input class="vinkelInput" id="vinkelB" type="text" name=""></input>
                                         </div>
                                         <div class="colVinkel">
                                             <p style="text-align:center">Vinkel C</p>
                                             <input class="vinkelInput" id="vinkelC" type="text" name=""></input>
-                                        </div> 
+                                        </div>
 
                                         <!-- sider -->
-                                        <div class="colVinkel">                               
+                                        <div class="colVinkel">
                                             <p style="text-align:center">Side a</p>
                                             <input class="sideInputa" id="sidea" type="text" name=""></input>
-                                        </div>                    
-                                        <div class="colVinkel">                               
+                                        </div>
+                                        <div class="colVinkel">
                                             <p style="text-align:center">Side b</p>
                                             <input class="sideInput" id="sideb" type="text" name=""></input>
                                         </div>
                                         <div class="colVinkel">
                                             <p style="text-align:center">Side c</p>
                                             <input class="sideInput" id="sidec" type="text" name=""></input>
-                                        </div> 
+                                        </div>
                                         <button class="uderegn" id="calculateVinkel">Udregn</button>
-                                        <button class="clearVinkelberegner" id="clearVinkelberegner">Clear</button>   
+                                        <button class="clearVinkelberegner" id="clearVinkelberegner">Clear</button>
                                     </div>
                                 </div>
-                            </div>                    
+                            </div>
                             <div class="colP">
                                 <!-- 3 -->
                             </div>
-                    </div>        
+                    </div>
 
     </body>
 </html>
