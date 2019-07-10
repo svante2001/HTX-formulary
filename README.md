@@ -1,4 +1,4 @@
-[Website address](https://blackbird.zigzak.net/~svante/)
+[Website](https://blackbird.zigzak.net/~svante/)
 
 The HTX formula collection
 ------
