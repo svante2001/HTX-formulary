@@ -6,16 +6,17 @@
 
         <link rel="stylesheet" href="style.css" />
         <!-- <script type="text/javascript" src="calculation.js"></script> -->
-        <script type="text/javascript" src="fractionCalc.js"></script>
-        <script type="text/javascript" src="pythagoras.js"></script>
-        <script type="text/javascript" src="any-triangleCalc.js"></script>
+        <script type="text/javascript" src="js/fractionCalc.js"></script>
+        <script type="text/javascript" src="js/pythagoras.js"></script>
+        <script type="text/javascript" src="js/any-triangleCalc.js"></script>
+        <script type="text/javascript" src="js/statistics.js"></script>
         <style type="text/css"></style>
     </head>
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-sclae=1">
 
-    <body class="body" onload="Pythagaros(), vinkelBeregner(), fractions ()" >
+    <body class="body" onload="Pythagaros(), vinkelBeregner(), fractions (), statistics()" >
 
 
         <header class="homepageheader">
@@ -55,7 +56,7 @@
 
                 <div class="colP">
                     <div class="brøkinputs">
-                        <input id="forkort" type="checkbox">Forkort resultat</input> <br>
+                        <input class="fractionCheck" id="forkort" type="checkbox">Forkort resultat</input> <br>
                         <select id="operation" name="operation">
                             <option value="forkort">Ingen operation</option>
                             <option value="plus">Plus</option>
@@ -73,8 +74,9 @@
                 </div>
                 <div class="colP">
                     <div class="brøkResult">
-                        <p id="outputT" class="outputT">Tæller</p>
-                        <p id="outputN" class="outputN">Nævner</p>
+                        <h4 style="text-align: center">Resultat</h4>
+                        <p id="outputT" class="outputT">Tæller:</p>
+                        <p id="outputN" class="outputN">Nævner:</p>
                     </div>
                 </div>
             </div>
@@ -204,7 +206,59 @@
                             <div class="colP">
                                 <!-- 3 -->
                             </div>
+                        </div>
                     </div>
+                </div>
+
+
+<!-------------------------------------------Statestiks regner----------------------------------------------->
+    <div class="statestik">
+        <h1 class="overskrift">Statestik</h1>
+    </div>
+        <div class="wrapper">
+            <div class="colP">
+                col 1
+            </div>
+            <div class="colP">
+                col 2
+            </div>
+            <div class="colP">
+                col 3
+            </div>
+    </div>
+
+
+    <div class="statestikInteractive">
+        <div class="wrapper">
+            <!-- <div class="colStat" >
+                tom
+            </div> -->
+            <div class="colStat" >
+                <!-- input -->
+                <div class="statInputBox">
+                    <p class="vinkelInstruction">Indtast 3 variabler nedenfor↓</p>
+                    <input class="statInput" id="statArrayInput" type="text" name=""></input>
+                    <button class="statCalc" id="statCalc">Udregn</button>
+                </div>
+           </div>
+            <div class="colStat" >
+                <!-- output -->
+                <div class="statOutputBox">
+                    <p id="Sum" class="statOutput">Sum:</p>
+                    <p id="Gennemsnit" class="statOutput">Gennemsnit:</p>
+                    <p id="Q1" class="statOutput">Q1:</p>
+                    <p id="Median" class="statOutput">Median:</p>
+                    <p id="Q3" class="statOutput">Q3:</p>
+                    <p id="Hyppighed" class="statOutput">Hyppighed:</p>
+                    <p id="Frekvens" class="statsOutput">Frekvens:</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
 
     </body>
 </html>
