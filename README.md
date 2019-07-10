@@ -8,6 +8,5 @@ The HTX calculator
 ----
 
 
-> A collection for HTX
-> HTX [NEXT](https://nextkbh.dk/)
+> A collection for HTX [NEXT](https://nextkbh.dk/)
 
