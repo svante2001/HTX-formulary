@@ -8,6 +8,10 @@ NEXT Uddannelser
 > A formula collection for HTX [NEXT](https://nextkbh.dk/)
 > For chemistry, math and physics
 
+Next Uddannelser
+> A formula collection for HTX [NEXT](https://nextkbh.dk/)
+> For chemistry, math and physics
+
 
 #### JavaScript
 Automatic calcultions in JS
