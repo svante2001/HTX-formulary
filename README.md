@@ -11,7 +11,7 @@ NEXT Uddannelser
 
 
 #### JavaScript
-Automatic calcultions in JS
+Automatic calcultions made with JS
 
 
 
