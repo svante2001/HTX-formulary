@@ -216,50 +216,49 @@
         <h1 class="overskrift">Statestik</h1>
     </div>
         <div class="wrapper">
-            <div class="colP">
-                col 1
+            <div class="colStat">
+                Indtast en observation ad gangen og tryk 'tilføj' eller tastatur knappen enter.
             </div>
-            <div class="colP">
-                col 2
-            </div>
-            <div class="colP">
-                col 3
+            <div class="colStat">
+                Tryk på knappen 'ordnet' for at få kopieret dit datasæt over til din udklipsholder som et
+                ordnet observationssæt fra mindst til størst.
             </div>
     </div>
 
 
     <div class="statestikInteractive">
         <div class="wrapper">
-            <!-- <div class="colStat" >
+            <!-- <div class="colStat1" >
                 tom
             </div> -->
-            <div class="colStat" >
+            <div class="colStat1" >
                 <!-- input -->
                 <div class="statInputBox">
-                    <p class="vinkelInstruction">Indtast 3 variabler nedenfor↓</p>
+                    <p class="vinkelInstruction">Indtast dine observationer↓</p>
                     <input class="statInput" id="statArrayInput" type="text" name=""></input>
                     <button class="statAdd" id="statAdd">Tilføj</button>
                     <button class="statCalc" id="statCalc">Udregn</button>
                 </div>
            </div>
-            <div class="colStat" >
+            <div class="colStat1" >
                 <!-- output -->
                 <div class="statOutputBox">
+                    <p id="MindsteVærdi" class="statOutput">Mindste værdi:</p>
+                    <p id="StørsteVærdi" class="statOutput">Største værdi:</p>
+                    <p id="variation" class="statOutput">Variations bredde:</p>
                     <p id="Sum" class="statOutput">Sum:</p>
                     <p id="Gennemsnit" class="statOutput">Gennemsnit:</p>
                     <p id="Q1" class="statOutput">Q1:</p>
                     <p id="Median" class="statOutput">Median:</p>
                     <p id="Q3" class="statOutput">Q3:</p>
-                    <p id="Hyppighed" class="statOutput">Hyppighed:</p>
-                    <p id="Frekvens" class="statsOutput">Frekvens:</p>
+                    <p id="Kvartilbredde" class="statOutput">Kvartilbredde:</p>
+                    <p id="Skævhed" class="statOutput">Skævhed:</p>
+                    <button class="statClear" id="statClear">Clear</button>
+                    <button class="statOrder" id="statOrder">Ordnet</button>
                 </div>
             </div>
         </div>
     </div>
-
-
-
-
 
     </body>
 </html>
