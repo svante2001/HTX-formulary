@@ -1,6 +1,6 @@
 var numbers = [];
 var arr = numbers;
-var sortedNumbers = sort()
+
 
 // Bubblesort to make the users input in order from smallest to largest
 function sort() {
@@ -18,6 +18,8 @@ function sort() {
     } while (swapped);
     return arr;
 }
+
+
 
 function statistics() {
     // Makes it possible to press enter insted of the 'tilføj' button
@@ -38,6 +40,8 @@ function statistics() {
 
     // When clicked 'udregn'
     document.getElementById('statCalc').onclick = function () {
+        sortedNumbers = sort();
+
         // Sum and average
         var sum = 0;
         for (var i = 0; i < numbers.length; i++) {
@@ -94,6 +98,29 @@ function statistics() {
         } else {
             document.getElementById('Skævhed').innerHTML = 'Skævhed: Ingen'
         }
+
+        // Typetal
+        var typetal = sortedNumbers[0];
+        var times = 1;
+        var times_tmp = 1;
+        for (var i = 1; i < sortedNumbers.length; i++) {
+            if (sortedNumbers[i] == sortedNumbers[i - 1]) {
+                times_tmp++;
+            } else {
+                times_tmp = 1
+            }
+            if (times_tmp > times) {
+                typetal = sortedNumbers[i];
+                times = times_tmp;
+            } else if (times_tmp == times) {
+                typetal = 'Der er flere end et typetal'
+            }
+        }
+        if (times == 1) {
+            document.getElementById('Typetal').innerHTML = 'Typetal: ' + typetal + ', som er der: ' + times + ' gang';
+        } else {
+            document.getElementById('Typetal').innerHTML = 'Typetal: ' + typetal + ', som er der: ' + times + ' gange';
+        }
     }
 
     // Clear output div and input array
@@ -108,6 +135,7 @@ function statistics() {
         document.getElementById('Q3').innerHTML = 'Q3:'
         document.getElementById('Kvartilbredde').innerHTML = 'Kvartilbredde:';
         document.getElementById('Skævhed').innerHTML = 'Skævhed:'
+        document.getElementById('Typetal').innerHTML = 'Typetal:'
         numbers = [];
         textarea = '';
     }
