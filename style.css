@@ -846,7 +846,7 @@ h1 {
    top:10%;
    background:lightblue;
    position: absolute;
-   height: 80%;
+   height: 70%;
    width: 30%;
    font-size: 11pt;
    font-family: Arial, Verdana, sans-serif;
@@ -857,16 +857,19 @@ h1 {
 .statInput {
    background: white;
    top: 20%;
+   left: 35%;
+   width: 30%;
+   height: 30px;
    position: absolute;
-   align-content: center;
+   /* align-content: center; */
 }
 
 .statCalc {
-   top: 15%;
+   bottom: 52%;
    right: 10%;
    position: absolute;
-   height: 16%;
-   /* width: 5%; */
+   height: 12%;
+   width: 17%;
    font-size: 10pt;
    font-family: Arial, Verdana, sans-serif;
    border-radius: 12px;
@@ -875,11 +878,11 @@ h1 {
 }
 
 .statAdd {
-   top: 15%;
-   right: 40%;
+   bottom: 52%;
+   left: 10%;
    position: absolute;
-   height: 16%;
-   /* width: 5%; */
+   height: 12%;
+   width: 17%;
    font-size: 10pt;
    font-family: Arial, Verdana, sans-serif;
    border-radius: 12px;
@@ -892,7 +895,7 @@ h1 {
    top:10%;
    background:lightblue;
    position: absolute;
-   height: 80%;
+   height: 70%;
    width: 30%;
    font-size: 11pt;
    font-family: Arial, Verdana, sans-serif;
@@ -900,19 +903,18 @@ h1 {
    padding: 0px;
 }
 
-/* .statOutput {
-   left: 5%;
-   top:10%;
-   position: absolute;
+.statOutput {
+   left: 2%;
+   position: relative;
    font-size: 11pt;
    font-family: Arial, Verdana, sans-serif;
-} */
+}
 
 .statClear {
    bottom: 5%;
    right: 5%;
    position: absolute;
-   height: 60px;
+   height: 12%;
    width: 50px;
    font-size: 10pt;
    font-family: Arial, Verdana, sans-serif;
@@ -925,7 +927,7 @@ h1 {
    bottom: 5%;
    right: 20%;
    position: absolute;
-   height: 60px;
+   height: 12%;
    width: 60px;
    font-size: 10pt;
    font-family: Arial, Verdana, sans-serif;
