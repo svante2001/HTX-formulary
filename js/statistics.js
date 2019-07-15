@@ -2,6 +2,7 @@ var numbers = [];
 var arr = numbers;
 var sortedNumbers = sort()
 
+// Bubblesort to make the users input in order from smallest to largest
 function sort() {
     let swapped;
     do {
@@ -19,7 +20,6 @@ function sort() {
 }
 
 function statistics() {
-
     // Makes it possible to press enter insted of the 'tilføj' button
     var input = document.getElementById("statArrayInput");
     input.addEventListener("keyup", function (event) {
@@ -47,12 +47,9 @@ function statistics() {
         var avg = sum / numbers.length;
         document.getElementById('Gennemsnit').innerHTML = 'Gennemsnit: ' + avg;
 
-        // Sort to make the dataset in order
-
-        var MindsteVærdi = sortedNumbers[0];
-        var StørsteVærdi = sortedNumbers[numbers.length - 1];
-
         // Maximum and minimum values
+        var MindsteVærdi = sortedNumbers[0];
+        var StørsteVærdi = sortedNumbers[sortedNumbers.length - 1];
         document.getElementById('MindsteVærdi').innerHTML = 'Mindste værdi: ' + MindsteVærdi;
         document.getElementById('StørsteVærdi').innerHTML = 'Største værdi: ' + StørsteVærdi;
 
@@ -68,8 +65,7 @@ function statistics() {
             document.getElementById('Q1').innerHTML = 'Q1: ' + Q1;
             Q3 = median + (median / 2);
             document.getElementById('Q3').innerHTML = 'Q3: ' + Q3;
-        }
-        else {  //Even lenght
+        } else {  //Even lenght
             var int_place2 = (sortedNumbers.length / 2) - 1;
             var int_place3 = (sortedNumbers.length / 2);
             var even_median1 = sortedNumbers[int_place2];
@@ -82,15 +78,15 @@ function statistics() {
             document.getElementById('Q3').innerHTML = 'Q3: ' + Q3;
         }
 
-        //Kvartilbredde
+        // Kvartilbredde
         var kvartilbredde = Q3 - Q1;
         document.getElementById('Kvartilbredde').innerHTML = 'Kvartilbredde: ' + kvartilbredde;
 
-        // Variations
+        // Difference of maximum and minimum
         var variation = StørsteVærdi - MindsteVærdi;
         document.getElementById('variation').innerHTML = 'Variations bredde: ' + variation;
 
-        // Skævhed
+        // Skewness
         if (median > avg) {
             document.getElementById('Skævhed').innerHTML = 'Skævhed: Højreskævt'
         } else if (median < avg) {
@@ -104,11 +100,14 @@ function statistics() {
     document.getElementById('statClear').onclick = function () {
         document.getElementById('MindsteVærdi').innerHTML = 'Mindste værdi:'
         document.getElementById('StørsteVærdi').innerHTML = 'Største værdi:'
+        document.getElementById('variation').innerHTML = 'Variations bredde:';
         document.getElementById('Sum').innerHTML = 'Sum:'
         document.getElementById('Gennemsnit').innerHTML = 'Gennemsnit:'
         document.getElementById('Q1').innerHTML = 'Q1:'
         document.getElementById('Median').innerHTML = 'Median:'
         document.getElementById('Q3').innerHTML = 'Q3:'
+        document.getElementById('Kvartilbredde').innerHTML = 'Kvartilbredde:';
+        document.getElementById('Skævhed').innerHTML = 'Skævhed:'
         numbers = [];
         textarea = '';
     }
