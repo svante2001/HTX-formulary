@@ -5,18 +5,18 @@
         </title>
 
         <link rel="stylesheet" href="style.css" />
-        <!-- <script type="text/javascript" src="calculation.js"></script> -->
         <script type="text/javascript" src="js/fractionCalc.js"></script>
         <script type="text/javascript" src="js/pythagoras.js"></script>
         <script type="text/javascript" src="js/any-triangleCalc.js"></script>
         <script type="text/javascript" src="js/statistics.js"></script>
+        <script type="text/javascript" src="js/percent.js"></script>
         <style type="text/css"></style>
     </head>
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-sclae=1">
 
-    <body class="body" onload="Pythagaros(); vinkelBeregner(); fractions(); statistics()" >
+    <body class="body" onload="Pythagaros(); vinkelBeregner(); fractions(); statistics(); percent()">
 
 
         <header class="homepageheader">
@@ -32,6 +32,9 @@
             </div>
         </header>
 
+
+
+<!-------------------------------------------Brøkregner regner----------------------------------------------->
 
         <div class="Introbrøker">
             <h1 class="overskrift">Brøkregner</h1>
@@ -56,18 +59,28 @@
 
                 <div class="colP">
                     <div class="brøkinputs">
-                        <input class="fractionCheck" id="forkort" type="checkbox">Forkort resultat</input> <br>
-                        <select id="operation" name="operation">
-                            <option value="forkort">Ingen operation</option>
-                            <option value="plus">Plus</option>
-                            <option value="minus">Minus</option>
-                            <option value="gange">Gange</option>
-                            <option value="divider">Divider</option>
-                        </select> <br>
-                        <input class="brøkinput" id="aT" type="text" name=""></input>
-                        <input class="brøkinput" id="bT" type="text" name=""></input> <br> <br>
-                        <input class="brøkinput" id="aN" type="text" name=""></input>
-                        <input class="brøkinput" id="bN" type="text" name=""></input>
+                            <p class="pythagarosInstruction">Indtast dine variabler nedenfor↓</p>
+                        <div class="wrapper">
+                            <div class="colF">
+                                <input class="brøkinputT" id="aT" type="text" name=""></input>
+                                <input class="brøkinputN" id="aN" type="text" name=""></input>
+                            </div>
+
+                            <div class="colF">
+                                <select id="operation" name="operation">
+                                    <option value="forkort">-Vælg her-</option>
+                                    <option value="plus">Plus</option>
+                                    <option value="minus">Minus</option>
+                                    <option value="gange">Gange</option>
+                                    <option value="divider">Divider</option>
+                                </select>
+                            </div>
+
+                            <div class="colF">
+                                <input class="brøkinputT2" id="bT" type="text" name=""></input>
+                                <input class="brøkinputN2" id="bN" type="text" name=""></input>
+                            </div>
+                        </div>
                         <button class="uderegn" id="fractions">Udregn</button>
                         <button class="clearFractions" id="clearFractions">Clear</button>
                     </div>
@@ -75,6 +88,7 @@
                 <div class="colP">
                     <div class="brøkResult">
                         <h4 style="text-align: center">Resultat</h4>
+                        <input class="fractionCheck" id="forkort" type="checkbox">Forkort resultat</input> <br>
                         <p id="outputT" class="outputT">Tæller:</p>
                         <p id="outputN" class="outputN">Nævner:</p>
                     </div>
@@ -82,6 +96,63 @@
             </div>
         </div>
 
+
+<!-------------------------------------------Procent regner----------------------------------------------->
+
+
+<div class="percent">
+    <h1 class="overskrift">(Procent regner)</h1>
+        <div class="wrapper">
+            <div class="colF">
+                1
+            </div>
+            <div class="colF">
+                2
+            </div>
+            <div class="colF">
+                3
+            </div>
+        </div>
+        <h4 style="text-align: center" class="sans">↓ Scroll for procent beregner ↓</h4>
+</div>
+
+
+<div class="percentI">
+    <div class="percentCalc">
+    <h4 style="text-align: center" class="sans">↓ Indtast dine variabler nedenfor ↓</h4>
+        <div class="wrapper">
+            <div class="colF">
+                <input class="input1" id="input1" type="text" name=""></input>
+            </div>
+            <div class="colF">
+                <select class="percentSelection" id="percentSelection" name="percentSelection">
+                    <option value="default">-Vælg her-</option>
+                    <option value="x/y">x ud af y i %</option>
+                    <option value="x%y">x% ud af y</option>
+                    <option value="x+-y">x% ± y</option>
+                </select>
+            </div>
+            <div class="colF">
+                <input class="input2" id="input2" type="text" name=""></input>
+            </div>
+        </div>
+        <button class="uderegn" id="udregn">Udregn</button>
+    </div>
+
+    <div class="percentOut">
+        <h4 style="text-align: center">Resultat</h4>
+        <p class="percentResult" id="percentResult"></p>
+        <hr class="resultLine">
+        <p class="percentLog" id="percentLog1"></p>
+        <p class="percentLog" id="percentLog2"></p>
+        <p class="percentLog" id="percentLog3"></p>
+        <button class="uderegn" id="percentClear">Clear</button>
+    </div>
+</div>
+
+
+
+<!-------------------------------------------Pythagaros regner----------------------------------------------->
 
         <div class="IntroPythagoras">
             <h1 class="overskrift">Pythagoras</h1>
@@ -139,6 +210,10 @@
                     </div>
             </div>
         </div>
+
+
+<!-------------------------------------------Vilkårligtrekant regner----------------------------------------------->
+
 
         <div class="IntroPythagoras">
                 <h1 class="overskrift">(Vilkårlig trekants beregner)</h1>
@@ -213,11 +288,12 @@
 
 <!-------------------------------------------Statestiks regner----------------------------------------------->
     <div class="statestik">
-        <h1 class="overskrift">Statestik</h1>
+        <h1 class="overskrift">(Statestik)</h1>
     </div>
         <div class="wrapper">
             <div class="colStat">
-                Indtast en observation ad gangen og tryk 'tilføj' eller tastatur knappen enter.
+                Indtast en observation ad gangen og tryk 'tilføj' eller tastatur knappen enter. Kan ikke håndtere
+                tal der er større end 5 cifre.
             </div>
             <div class="colStat">
                 Tryk på knappen 'ordnet' for at få kopieret dit datasæt over til din udklipsholder som et
@@ -253,6 +329,7 @@
                     <p id="Q3" class="statOutput">Q3:</p>
                     <p id="Kvartilbredde" class="statOutput">Kvartilbredde:</p>
                     <p id="Skævhed" class="statOutput">Skævhed:</p>
+                    <p id="Typetal" class="statOutput">Typetal:</p>
                     <button class="statClear" id="statClear">Clear</button>
                     <button class="statOrder" id="statOrder">Ordnet</button>
                 </div>
