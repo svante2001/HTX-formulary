@@ -1,6 +1,6 @@
 var numbers = [];
 var arr = numbers;
-
+var enter = false;
 
 // Bubblesort to make the users input in order from smallest to largest
 function sort() {
@@ -19,8 +19,6 @@ function sort() {
     return arr;
 }
 
-
-
 function statistics() {
     // Makes it possible to press enter insted of the 'tilføj' button
     var input = document.getElementById("statArrayInput");
@@ -36,6 +34,10 @@ function statistics() {
         const input = document.getElementById('statArrayInput');
         numbers.push(parseFloat(input.value));
         document.getElementById('statArrayInput').value = '';
+        if (enter == false) {
+            alert('Brug "enter" i stedet for at trykke tilføj hver gang')
+            enter = true;
+        } else {}
     }
 
     // When clicked 'udregn'
@@ -137,7 +139,10 @@ function statistics() {
         document.getElementById('Skævhed').innerHTML = 'Skævhed:'
         document.getElementById('Typetal').innerHTML = 'Typetal:'
         numbers = [];
+        arr = [];
         textarea = '';
+        document.getElementById('Skævhed').innerHTML = 'Skævhed:';
+        document.getElementById('Typetal').innerHTML = 'Typetal:';
     }
 
     // Copy sorted array to clipboard
