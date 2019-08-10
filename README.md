@@ -1,4 +1,4 @@
-[Website](https://blackbird.zigzak.net/~svante/)
+[Website](https://www.supersejemig.dk)
 
 The HTX formula collection
 ------
