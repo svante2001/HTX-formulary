@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <title>
+            En formelsamling | fysik
+        </title>
+
+        <!-- <link rel="stylesheet" href="style.css" /> -->
+        <link rel="stylesheet" href="css/index.css" />
+        <link rel="stylesheet" href="css/physics.css" />
+
+        <script type="text/javascript" src="js/on-load.js"></script>
+        <script type="text/javascript" src="js/vector.js"></script>
+        <style type="text/css"></style>
+    </head>
+
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-sclae=1">
+
+    <body class="body" onload="load(); vector()">
+        <header class="homepageheader">
+            <div class="container">
+                    <nav>
+                        <ul >
+                            <li><a href="index.html">Forside</a></li>
+                            <li><a href="Chemistry.html">Kemi</a></li>
+                            <li><a href="math.html">Matematik</a></li>
+                            <li><a href="physics.html">Fysik</a></li>
+                        </ul>
+                    </nav>
+            </div>
+        </header>
+
+<!-------------------------------- vektor ------------------------------>
+
+        <div class="vektorIntro">
+            <h1 class="overskrift">(Vektor regner 2D)</h1>
+            <div class="wrapper">
+                <div class="col">
+                    1
+                </div>
+                <div class="col">
+                    2
+                </div>
+                <div class="col">
+                    3
+                </div>
+            </div>
+        </div>
+
+        <div class="vektorRegner"  >
+            <div class="vektorCalc" id="test">
+                <h4 style="text-align: center" class="sans">↓ Indtast dine variabler nedenfor ↓</h4>
+                <select class="selectOperations" id="vectorOperation" name="operation">
+                    <option value="valg">-Vælg operation-</option>
+                    <option value="sqrt">Koordinat til længde</option>
+                    <option value="tal">Addition</option>
+                    <option value="tal">Subtraktion</option>
+                    <option value="skalar">(Skalarprodukt)</option>
+                </select>
+                <input class="vektorx" id="Vx" type="text" name=""></input>
+                <input class="vektory" id="Vy" type="text" name=""><y/input>
+                <p class="indicatorX">x:</p>
+                <p class="indicatorY">y:</p>
+                <button class="udregn" id="vektorUdregn">Udregn</button>
+                <button class="vectoradd" id="vectorAdd">Tilføj vektor sæt</button>
+            </div>
+
+            <div class="vektorOut" id="outtest">
+                <h4 style="text-align: center">Resultat</h4>
+                <p class="vektorResult" id="vektorResult"></p>
+                <p class="vektorResult" id="vektorResult2"></p>
+                <button class="udregn" id="vektorClear">Clear</button>
+            </div>
+
+        </div>
+    </body>
+</html>

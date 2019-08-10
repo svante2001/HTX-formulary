@@ -4,7 +4,11 @@
             En formelsamling | matematik
         </title>
 
-        <link rel="stylesheet" href="style.css" />
+        <!-- <link rel="stylesheet" href="style.css" /> -->
+        <link rel="stylesheet" href="css/chemistry.css" />
+        <link rel="stylesheet" href="css/index.css" />
+        <link rel="stylesheet" href="css/math.css" />
+
         <script type="text/javascript" src="js/fractionCalc.js"></script>
         <script type="text/javascript" src="js/pythagoras.js"></script>
         <script type="text/javascript" src="js/any-triangleCalc.js"></script>
@@ -26,7 +30,7 @@
                             <li><a href="index.html">Forside</a></li>
                             <li><a href="Chemistry.html">Kemi</a></li>
                             <li><a href="math.html">Matematik</a></li>
-                            <li><a href="">(Fysik)</a></li>
+                            <li><a href="physics.html">Fysik</a></li>
                         </ul>
                     </nav>
             </div>
@@ -52,22 +56,23 @@
                     brøk i den første brøk input. Vær opmærksom på at operation vælgeren står på "Ingen operation"
                 </div>
             </div>
+            <h4 style="text-align: center" class="sans">↓ Scroll for brøkregner ↓</h4>
         </div>
 
         <div class="brøkregner">
             <div class="wrapper">
-
                 <div class="colP">
                     <div class="brøkinputs">
                             <p class="pythagarosInstruction">Indtast dine variabler nedenfor↓</p>
                         <div class="wrapper">
                             <div class="colF">
                                 <input class="brøkinputT" id="aT" type="text" name=""></input>
+                                <hr class="brøkstregL">
                                 <input class="brøkinputN" id="aN" type="text" name=""></input>
                             </div>
 
                             <div class="colF">
-                                <select id="operation" name="operation">
+                                <select class="selection" id="operation" name="operation">
                                     <option value="forkort">-Vælg her-</option>
                                     <option value="plus">Plus</option>
                                     <option value="minus">Minus</option>
@@ -78,6 +83,7 @@
 
                             <div class="colF">
                                 <input class="brøkinputT2" id="bT" type="text" name=""></input>
+                                <hr class="brøkstregR">
                                 <input class="brøkinputN2" id="bN" type="text" name=""></input>
                             </div>
                         </div>
@@ -101,16 +107,19 @@
 
 
 <div class="percent">
-    <h1 class="overskrift">(Procent regner)</h1>
+    <h1 class="overskrift">Procent regner</h1>
         <div class="wrapper">
             <div class="colF">
-                1
+                En procent betyder en hundrede del og skrives 1% = 0,01. 6% betyder 6 hundrede dele og kan
+                derfor skrives som: 6% eller 0,6.
             </div>
             <div class="colF">
-                2
+                På et gymnasium er der 1000 elever. Man har fundet ud af, at 400 af eleverne går i 2.g.
+                Da 1 elev svarer til 1 hundrede del (og dermed svarer til 0,1% af alle gymnasiets elever) kan
+                man sige, at 40% af eleverne går i 2.g.
             </div>
             <div class="colF">
-                3
+                Vælg hvilken slags procentudregning du vil have under 'vælgher' menuen.
             </div>
         </div>
         <h4 style="text-align: center" class="sans">↓ Scroll for procent beregner ↓</h4>
@@ -125,11 +134,12 @@
                 <input class="input1" id="input1" type="text" name=""></input>
             </div>
             <div class="colF">
-                <select class="percentSelection" id="percentSelection" name="percentSelection">
+                <select class="selection" id="percentSelection" name="percentSelection">
                     <option value="default">-Vælg her-</option>
                     <option value="x/y">x ud af y i %</option>
                     <option value="x%y">x% ud af y</option>
-                    <option value="x+-y">x% ± y</option>
+                    <option value="x+-y">x% + y</option>
+                    <option value="x-y">x% - y</option>
                 </select>
             </div>
             <div class="colF">
@@ -145,11 +155,9 @@
         <hr class="resultLine">
         <p class="percentLog" id="percentLog1"></p>
         <p class="percentLog" id="percentLog2"></p>
-        <p class="percentLog" id="percentLog3"></p>
         <button class="uderegn" id="percentClear">Clear</button>
     </div>
 </div>
-
 
 
 <!-------------------------------------------Pythagaros regner----------------------------------------------->
@@ -232,11 +240,11 @@
                 </div>
                 <h4 style="text-align: center" class="sans">↓ Scroll for vilkårlig trekants beregner ↓</h4>
 
-                <div class="PythagarosRegner">
+                <div class="TrekantsRegner">
                     <div class="cFirstI">
                         <div class="interactive">
                             <div class="colP">
-                                <div class="helpWindowPythagaros">
+                                <div class="helpWindowVinkel">
                                     <p style="text-align: left">Husk:</p>
                                     <p style="text-align: left"></p>
                                 </div>
@@ -288,18 +296,20 @@
 
 <!-------------------------------------------Statestiks regner----------------------------------------------->
     <div class="statestik">
-        <h1 class="overskrift">(Statestik)</h1>
-    </div>
+        <h1 class="overskrift">Statestik</h1>
         <div class="wrapper">
-            <div class="colStat">
-                Indtast en observation ad gangen og tryk 'tilføj' eller tastatur knappen enter. Kan ikke håndtere
-                tal der er større end 5 cifre.
-            </div>
-            <div class="colStat">
-                Tryk på knappen 'ordnet' for at få kopieret dit datasæt over til din udklipsholder som et
-                ordnet observationssæt fra mindst til størst.
-            </div>
+                <div class="colStat">
+                    Indtast en observation ad gangen og tryk 'tilføj' eller tastatur knappen enter. Kan ikke håndtere
+                    tal der er større end 5 cifre.
+                </div>
+                <div class="colStat">
+                    Tryk på knappen 'ordnet' for at få kopieret dit datasæt over til din udklipsholder som et
+                    ordnet observationssæt fra mindst til størst.
+                </div>
+        </div>
+        <h4 style="text-align: center" class="sans">↓ Scroll for vilkårlig trekants beregner ↓</h4>
     </div>
+
 
 
     <div class="statestikInteractive">

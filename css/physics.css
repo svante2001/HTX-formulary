@@ -1,0 +1,132 @@
+.vektorIntro {
+    margin:0;
+    padding:0;
+    height: 370px;
+    width: 100%;
+    top: 10%;
+    background:white;
+    position:absolute;
+    /* position:relative; */
+    overflow: hidden;
+}
+
+.overskrift {
+    font-size: 14pt;
+    font-family: 'Work Sans', sans-serif;
+    border: 5px solid white;
+    left: 10%;
+}
+
+.vektorRegner {
+    top:370px;
+    height:400;
+    margin:0;
+    padding:0;
+    width:100%;
+    background:lightgrey;
+    position: relative;
+}
+
+.wrapper {
+    display:flex;
+    font-family: 'Work Sans', sans-serif;
+    line-height: 1.15;
+}
+
+.col {
+    width: 33%;
+    padding: 40px;
+    overflow:hidden;
+}
+
+.vektorCalc {
+    left: 10%;
+    top: 10%;
+    bottom: 10%;
+    background:lightblue;
+    position: absolute;
+    width: 40%;
+    font-size: 11pt;
+    font-family: Arial, Verdana, sans-serif;
+}
+
+.selectOperations {
+    position: absolute;
+    top: 29.5%;
+    left: 5%;
+}
+
+.vektorx {
+    position: absolute;
+    height: 30px;
+    width: 70px;
+    top: 20%;
+    left: 43%;
+}
+
+.vektory {
+    position: absolute;
+    height: 30px;
+    width: 70px;
+    top: 35%;
+    left: 43%;
+}
+
+.indicatorX {
+    position: absolute;
+    height: 30px;
+    width: 70px;
+    top: 18%;
+    left: 38%;
+}
+
+.indicatorY {
+    position: absolute;
+    height: 30px;
+    width: 70px;
+    top: 33%;
+    left: 38%;
+}
+
+.vektorOut {
+    right: 10%;
+    top: 10%;
+    bottom: 10%;
+    background:lightblue;
+    position: absolute;
+    width: 20%;
+    font-size: 11pt;
+    font-family: Arial, Verdana, sans-serif;
+}
+
+.udregn {
+    bottom: 5%;
+    right: 10%;
+    position: absolute;
+    height: 20%;
+    width: 5%px;
+    font-size: 10pt;
+    font-family: Arial, Verdana, sans-serif;
+    border-radius: 12px;
+    background-color:lightblue;
+    border: 2px solid black;
+}
+
+.vectoradd {
+    bottom: 5%;
+    left: 10%;
+    position: absolute;
+    height: 20%;
+    width: 5%px;
+    font-size: 10pt;
+    font-family: Arial, Verdana, sans-serif;
+    border-radius: 12px;
+    background-color:lightblue;
+    border: 2px solid black;
+}
+
+.vektorResult {
+    position: relative;
+    left: 7%;
+    font-size: 14pt;
+}
