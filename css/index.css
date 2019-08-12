@@ -113,6 +113,17 @@
        right:2%;
     }
 
+    .summerBreak {
+      font-size: 10pt;
+      position: absolute;
+      color: black;
+      font-family: 'Work Sans', sans-serif;
+      top: 6%;
+      right:2%;
+      padding: 10px;
+      border: 2px solid black;
+    }
+
     .welcome {
        font-family: Arial, Verdana, sans-serif;
        color: white;
