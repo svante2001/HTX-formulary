@@ -26,11 +26,17 @@ function percent () {
             // x% +- y
             if (one && two) {
                 var resultPlus = (two*(1+(one/100))).toFixed(2);
-                var resultMinus = (two*(1-(one/100))).toFixed(2);
-                document.getElementById('percentResult').innerHTML = 'Plus: ' + resultPlus + ', minus: ' + resultMinus;
-                document.getElementById('percentLog1').innerHTML = 'y*(1±(x/100))=z';
+                document.getElementById('percentResult').innerHTML = resultPlus;
+                document.getElementById('percentLog1').innerHTML = 'y*(1+(x/100))=z';
                 document.getElementById('percentLog2').innerHTML = two + '*(1+(' + one + '/100))=' + resultPlus;
-                document.getElementById('percentLog3').innerHTML = two + '*(1-(' + one + '/100))=' + resultMinus;
+
+            }
+        } else if (operation == 4) {
+            if (one && two) {
+                var resultMinus = (two*(1-(one/100))).toFixed(2);
+                document.getElementById('percentResult').innerHTML = resultMinus;
+                document.getElementById('percentLog1').innerHTML = 'y*(1-(x/100))=z';
+                document.getElementById('percentLog2').innerHTML = two + '*(1-(' + one + '/100))=' + resultMinus;
             }
         }
    }
@@ -44,5 +50,4 @@ function percent () {
         document.getElementById('percentLog2').innerHTML = '';
         document.getElementById('percentLog3').innerHTML = '';
    }
-
 }

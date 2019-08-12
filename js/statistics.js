@@ -109,13 +109,13 @@ function statistics() {
             if (sortedNumbers[i] == sortedNumbers[i - 1]) {
                 times_tmp++;
             } else {
-                times_tmp = 1
+                times_tmp = 1;
             }
             if (times_tmp > times) {
                 typetal = sortedNumbers[i];
                 times = times_tmp;
             } else if (times_tmp == times) {
-                typetal = 'Der er flere end et typetal'
+                typetal = 'Der er flere end et typetal';
             }
         }
         if (times == 1) {
