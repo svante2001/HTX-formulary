@@ -4,8 +4,8 @@ var arrayY = [];
 function sumVector(arrayX, arrayY, oper) {
     var plus = (x, y) => x + y;
     var minus = (x, y) => x - y;
-    var op = (oper === 'plus') ? plus : minus;
     var vectorX = 0.0;
+    var op = (oper === 'plus') ? plus : minus;
     var vectorY = 0.0;
 
     for (var i = 0; i < arrayX.length; i++) {
@@ -26,19 +26,17 @@ function vector() {
     }
 
     document.getElementById("vektorUdregn").onclick = function () {
-        var x = document.getElementById('Vx').value;
-        var y = document.getElementById('Vy').value;
         var vectorMenu = document.getElementById('vectorOperation').selectedIndex;
 
         if (vectorMenu == 0) {
             // nothing
         } else if (vectorMenu == 1) {
-            if (x && y) {
-                var result = (x*x+y*y).toFixed(3)
-                var resultSQRT = Math.sqrt(x*x+y*y).toFixed(3);
-                document.getElementById('vektorResult').innerHTML = 'Længde: ' + result;
-                document.getElementById('vektorResult2').innerHTML = 'Længde reelt: ' + resultSQRT;
-            } else { }
+            var x = arrayX[0]
+            var y = arrayY[0]
+            var result = (x * x + y * y).toFixed(3)
+            var resultSQRT = Math.sqrt(x * x + y * y).toFixed(3);
+            document.getElementById('vektorResult').innerHTML = 'Længde: ' + result;
+            document.getElementById('vektorResult2').innerHTML = 'Længde reelt: ' + resultSQRT;
         } else if (vectorMenu == 2) {
             // addition
             if (arrayX.length == arrayY.length) {

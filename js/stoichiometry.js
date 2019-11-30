@@ -262,5 +262,6 @@ function main() {
         textarea.select();
         document.execCommand('copy');
         textarea.remove();
+        alert("test");
     }
 }

@@ -1,52 +1,54 @@
 <html>
+
     <head>
         <title>
-            En formelsamling | fysik
+            HTX formelsamling | fysik
         </title>
-
-        <!-- <link rel="stylesheet" href="style.css" /> -->
         <link rel="stylesheet" href="css/index.css" />
         <link rel="stylesheet" href="css/physics.css" />
-
+        <link rel='icon' href='LinkPictures/' type='image/x-icon' />
         <script type="text/javascript" src="js/vector.js"></script>
+        <script type="text/javascript" src="js/deviation.js"></script>
         <style type="text/css"></style>
     </head>
 
-    <meta charset="utf-8"/>
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-sclae=1">
 
-    <body class="body" onload="vector()">
+    <body class="body" onload="vector(); deviation()">
+
         <header class="homepageheader">
             <div class="container">
-                    <nav>
-                        <ul >
-                            <li><a href="index.html">Forside</a></li>
-                            <li><a href="Chemistry.html">Kemi</a></li>
-                            <li><a href="math.html">Matematik</a></li>
-                            <li><a href="physics.html">Fysik</a></li>
-                        </ul>
-                    </nav>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Forside</a></li>
+                        <li><a href="Chemistry.html">Kemi</a></li>
+                        <li><a href="math.html">Matematik</a></li>
+                        <li><a href="physics.html">Fysik</a></li>
+                    </ul>
+                </nav>
             </div>
         </header>
+        <h4 style="text-align: center" class="sans">↓ Scroll for det periodiske system ↓</h4>
 
-<!-------------------------------- vektor ------------------------------>
-
+        <!-------------------------------- vektor ------------------------------>
         <div class="vektorIntro">
-            <h1 class="overskrift">(Vektor regner 2D)</h1>
+            <h1 class="overskrift">Vektor regner 2D</h1>
             <div class="wrapper">
                 <div class="col">
-                    1
+                    Vælg operation før du trykker udregn. Indtast hele din vektor (x/y) før du trykker "Tilføj
+                    vektor". Du kan tilføje lige så mange vektor som ønsket.
+                    <br>
+                    <br>
+                    Koordinat til længde tager kun den første vektor.
                 </div>
                 <div class="col">
-                    2
-                </div>
-                <div class="col">
-                    3
+                    Indtast kun 2 vektorkoordinator for skalarproduktet. Resultatet bliver også en skalar.
                 </div>
             </div>
         </div>
 
-        <div class="vektorRegner"  >
+        <div class="vektorRegner">
             <div class="vektorCalc" id="test">
                 <h4 style="text-align: center" class="sans">↓ Indtast dine variabler nedenfor ↓</h4>
                 <select class="selectOperations" id="vectorOperation" name="operation">
@@ -57,11 +59,11 @@
                     <option value="skalar">Skalarprodukt</option>
                 </select>
                 <input class="vektorx" id="Vx" type="text" name=""></input>
-                <input class="vektory" id="Vy" type="text" name=""><y/input>
+                <input class="vektory" id="Vy" type="text" name=""></input>
                 <p class="indicatorX">x:</p>
                 <p class="indicatorY">y:</p>
                 <button class="udregn" id="vektorUdregn">Udregn</button>
-                <button class="vectoradd" id="vectorAdd">Tilføj vektor sæt</button>
+                <button class="vectoradd" id="vectorAdd">Tilføj vektor</button>
             </div>
 
             <div class="vektorOut" id="outtest">
@@ -69,6 +71,41 @@
                 <p class="vektorResult" id="vektorResult"></p>
                 <p class="vektorResult" id="vektorResult2"></p>
                 <button class="udregn" id="vektorClear">Clear</button>
+            </div>
+        </div>
+
+        <!-------------------------------- Relativ afvigelse ------------------------------>
+
+        <div class="deviationIntro">
+            <h1 class="overskrift">Relativ afvigelse</h1>
+            <div class="wrapper">
+                <div class="col">
+                    Hvor meget afviger dit forsøg fra din udregning? Ved at indtaste dine værdier her kan du finde ud af det.
+                    Dit forsøg er den målte værdi mens din udregning er tabelværdien. Hvis din målte værdi er mindre en din tabel værdi vil
+                    resultatet blive negativt. Og positiv hvis omvendt.
+                </div>
+                <div class="col">
+                    Det resulat du får ud er den procentmæssige relative afvigelse. Selvfølelig afviger dette fra forsøg til forsøg, men hvis
+                    du får ± 5 procent har du regnet og lavet forsøget rigtigt.
+                </div>
+            </div>
+        </div>
+
+        <div class="deviationCalc">
+            <div class="deviationInput">
+                <h4 style="text-align: center" class="sans">↓ Indtast dine variabler nedenfor ↓</h4>
+                <p class="measuredText">Målt værdi:</p>
+                <p class="tabelText">Tabelværdi:</p>
+
+                <input class="måltVærdi" id="måltVærdi" type="text"></input>
+                <input class="tabelVærdi" id="tabelVærdi" type="text"></input>
+                <button class="udregn" id="deviationCalc">Udregn</button>
+            </div>
+
+            <div class="deviationOut">
+                    <h4 style="text-align: center">Resultat</h4>
+                    <p class="vektorResult" id="deviationResult"></p>
+                    <button class="udregn" id="deviationClear">Clear</button>
             </div>
 
         </div>

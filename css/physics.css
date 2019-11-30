@@ -3,11 +3,19 @@
     padding:0;
     height: 370px;
     width: 100%;
-    top: 10%;
+    top: 2%;
     background:white;
-    position:absolute;
-    /* position:relative; */
+    /* position:absolute; */
+    position:relative;
     overflow: hidden;
+}
+
+.test {
+    /* display:flex;
+    justify-content: center;
+    padding: 20px;
+    font-family: 'Work Sans', sans-serif;
+    line-height: 1.15; */
 }
 
 .overskrift {
@@ -24,7 +32,7 @@
     padding:0;
     width:100%;
     background:lightgrey;
-    position: relative;
+    position: inherit;
 }
 
 .wrapper {
@@ -34,9 +42,13 @@
 }
 
 .col {
-    width: 33%;
+    width: 50%;
     padding: 40px;
     overflow:hidden;
+    font-family: 'Work Sans', sans-serif;
+    line-height: 1.5;
+    display:flex;
+    justify-content: center;
 }
 
 .vektorCalc {
@@ -100,8 +112,8 @@
 }
 
 .udregn {
-    bottom: 5%;
-    right: 10%;
+    bottom: 7%;
+    right: 7%;
     position: absolute;
     height: 20%;
     width: 5%px;
@@ -113,8 +125,8 @@
 }
 
 .vectoradd {
-    bottom: 5%;
-    left: 10%;
+    top: 22%;
+    right: 10%;
     position: absolute;
     height: 20%;
     width: 5%px;
@@ -129,4 +141,74 @@
     position: relative;
     left: 7%;
     font-size: 14pt;
+}
+
+.deviationIntro {
+    top: 370px;
+    margin:0;
+    padding:0;
+    height: 330px;;
+    width:100%;
+    background:white;
+    position:relative
+}
+
+.deviationCalc {
+    top:1110px;
+    margin:0;
+    padding:0;
+    height: 370px;;
+    width:100%;
+    background:lightgray;
+    position: inherit;
+}
+
+.deviationInput {
+    left: 10%;
+    top: 10%;
+    bottom: 10%;
+    background:lightblue;
+    position: absolute;
+    width: 40%;
+    font-size: 11pt;
+    font-family: Arial, Verdana, sans-serif;
+}
+
+.måltVærdi {
+    position: absolute;
+    height: 35px;
+    width: 80px;
+    top: 28%;
+    left: 20%;
+}
+
+.tabelVærdi {
+    position: absolute;
+    height: 35px;
+    width: 80px;
+    top: 28%;
+    left: 60%;
+}
+
+.measuredText {
+    position: absolute;
+    top: 15%;
+    left: 20%;
+}
+
+.tabelText {
+    position: absolute;
+    top: 15%;
+    left: 60%;
+}
+
+.deviationOut {
+    right: 10%;
+    top: 10%;
+    bottom: 10%;
+    background:lightblue;
+    position: absolute;
+    width: 20%;
+    font-size: 11pt;
+    font-family: Arial, Verdana, sans-serif;
 }

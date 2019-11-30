@@ -113,7 +113,7 @@
        right:2%;
     }
 
-    .summerBreak {
+    .break {
       font-size: 10pt;
       position: absolute;
       color: black;
@@ -187,27 +187,68 @@
     }
 
     .github {
-       position: absolute;
-       width:auto;
-        max-width:30px;
-       height:auto;
-       left: 2%;
-       bottom: 15%;
-       display: block;
-       width: 25px;
-       height: 25px;
-       padding: 0px;
+      position: absolute;
+      width:auto;
+      max-width:30px;
+      height:auto;
+      left: 1.5%;
+      bottom: 15%;
+      display: block;
+      width: 25px;
+      height: 25px;
+      padding: 0px;
+      transition: transform .2s; /* Animation */
     }
 
-    .linkedin {
-       position: absolute;
-       width:auto;
-        max-width:30px;
-       height:auto;
-       left: 2%;
-       bottom: 10%;
+    .github_text {
+      position: absolute;
+      display: none;
+      height:30px;
+      width:290px;
+      left: 5%;
+      bottom: 13.5%;
+      font-size: 12pt;
+      font-family: Arial, Verdana, sans-serif;
+    }
+
+    a:hover + .github_text {
+      display: block;
+   }
+
+   .github:hover {
+      transform: scale(1.5);
+   }
+
+
+   .linkedin {
+      position: absolute;
+      width:auto;
+      max-width:30px;
+      height:auto;
+      left: 1.5%;
+      bottom: 10%;
+      display: block;
+      width: 25px;
+      height: 25px;
+      padding: 0px;
+      transition: transform .2s; /* Animation */
+   }
+
+    .linkedin_text {
+      position: absolute;
+      display: none;
+      height:30px;
+      width:290px;
+      left: 5%;
+      bottom: 8.5%;
+      font-size: 12pt;
+      font-family: Arial, Verdana, sans-serif;
+    }
+
+    a:hover + .linkedin_text {
        display: block;
-       width: 25px;
-       height: 25px;
-       padding: 0px;
+    }
+
+    .linkedin:hover {
+      transform: scale(1.5);
     }

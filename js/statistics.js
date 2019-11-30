@@ -15,7 +15,8 @@ function sort() {
                 swapped = true;
             }
         }
-    } while (swapped);
+    }
+    while (swapped);
     return arr;
 }
 
@@ -35,7 +36,7 @@ function statistics() {
         numbers.push(parseFloat(input.value));
         document.getElementById('statArrayInput').value = '';
         if (enter == false) {
-            alert('Brug "enter" i stedet for at trykke tilføj hver gang')
+            alert('Brug "enter" i stedet for at trykke tilføj hver gang');
             enter = true;
         } else {}
     }
@@ -59,11 +60,13 @@ function statistics() {
         document.getElementById('MindsteVærdi').innerHTML = 'Mindste værdi: ' + MindsteVærdi;
         document.getElementById('StørsteVærdi').innerHTML = 'Største værdi: ' + StørsteVærdi;
 
+        //FIXME:
         // Q1, median and Q3
         var median = 0;
         var Q1 = 0;
         var Q3 = 0;
-        if (numbers.length % 2 !== 0) { // Odd lenght
+        // Odd lenght
+        if (numbers.length % 2 !== 0) {
             var int_place = (sortedNumbers.length - 1) / 2;
             median = sortedNumbers[int_place];
             document.getElementById('Median').innerHTML = 'Median: ' + median;
@@ -71,7 +74,9 @@ function statistics() {
             document.getElementById('Q1').innerHTML = 'Q1: ' + Q1;
             Q3 = median + (median / 2);
             document.getElementById('Q3').innerHTML = 'Q3: ' + Q3;
-        } else {  //Even lenght
+        }
+        // Even lenght
+        else {
             var int_place2 = (sortedNumbers.length / 2) - 1;
             var int_place3 = (sortedNumbers.length / 2);
             var even_median1 = sortedNumbers[int_place2];
@@ -119,9 +124,9 @@ function statistics() {
             }
         }
         if (times == 1) {
-            document.getElementById('Typetal').innerHTML = 'Typetal: ' + typetal + ', som er der: ' + times + ' gang';
+            document.getElementById('Typetal').innerHTML = 'Typetal: ' + typetal + ', som er der ' + times + ' gang';
         } else {
-            document.getElementById('Typetal').innerHTML = 'Typetal: ' + typetal + ', som er der: ' + times + ' gange';
+            document.getElementById('Typetal').innerHTML = 'Typetal: ' + typetal + ', som er der ' + times + ' gange';
         }
     }
 
